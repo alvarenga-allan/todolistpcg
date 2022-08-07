@@ -12,12 +12,12 @@ const CustomDrawer = () => {
     <Container>
       <HeaderDrawer>
         <TitleDrawer>Tasks App</TitleDrawer>
-        <ButtonCloseDrawer>
+        <ButtonCloseDrawer onPress={() => navigation.dispatch(DrawerActions.closeDrawer())}>
           <CloseIcon />
         </ButtonCloseDrawer>
       </HeaderDrawer>
       <LineDrawer />
-      <ButtonDrawer>
+      <ButtonDrawer onPress={() => navigation.navigate('Tasks', {})}>
         <IconAndTitles>
           <LeftDrawer>
             <TasksIcon />
@@ -31,7 +31,7 @@ const CustomDrawer = () => {
           <ChevronRightIcon />
         </RightDrawer>
       </ButtonDrawer>
-      <ButtonDrawer>
+      <ButtonDrawer onPress={() => navigation.navigate('Services', {})} >
         <IconAndTitles>
           <LeftDrawer>
             <TasksIcon />

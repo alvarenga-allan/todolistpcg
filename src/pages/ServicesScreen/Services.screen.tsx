@@ -1,14 +1,15 @@
 import React from 'react';
 import Menu from '../../components/Menu/Menu.screen';
 import SearchInput from '../../components/SearchInput';
-import { Container } from './Home.styles';
+import { Container, Title } from './Services.styles'
 
-const Home = () => {
+const Services = () => {
   return (
     <Container>
       <Menu />
       <SearchInput />
+      <Title>oioi</Title>
     </Container>
   );
 };
-export default Home;
+export default Services;
