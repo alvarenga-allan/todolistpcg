@@ -4,7 +4,7 @@ import { Container, Title } from './Menu.styles';
 const Menu = () => {
   return (
     <Container>
-      <Title> Menu</Title>
+      <Title>Meu Quadro</Title>
     </Container>
   );
 };
