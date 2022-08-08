@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Path, Svg, Circle, Defs, G, ClipPath, Rect } from 'react-native-svg';
+import { Path, Svg, Defs, G, ClipPath, Rect } from 'react-native-svg';
 import colors from '../../../styles/colors';
 
 function ChevronRightIcon(props: React.SVGProps<Svg>) {
