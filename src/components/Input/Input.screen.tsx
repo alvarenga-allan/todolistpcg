@@ -1,51 +1,14 @@
-import { useNavigation, DrawerActions } from '@react-navigation/native';
-import React from 'react';
-import CloseIcon from '../../assets/icons/CloseIcon';
-import SectorIcon from '../../assets/icons/SectorIcon';
-import TasksIcon from '../../assets/icons/TasksIcon';
-import ChevronRightIcon from '../../assets/icons/ChevronRightIcon';
-import { Container, HeaderDrawer, TitleDrawer, ButtonCloseDrawer, LineDrawer, ButtonDrawer, LeftDrawer, ContentDrawer, TitleContentDrawer, RightDrawer, DescriptionContentDrawer, IconAndTitles } from './CustomDrawer.styles';
 
-const CustomDrawer = () => {
-  const navigation = useNavigation()
+import React from 'react';
+import { Container, InputContainer, Label } from './Input.styles';
+import { InputProps } from './Input.types'
+const Input: React.FC<InputProps> = props => {
+  const { label } = props;
   return (
     <Container>
-      <HeaderDrawer>
-        <TitleDrawer>Tasks App</TitleDrawer>
-        <ButtonCloseDrawer onPress={() => navigation.dispatch(DrawerActions.closeDrawer())}>
-          <CloseIcon />
-        </ButtonCloseDrawer>
-      </HeaderDrawer>
-      <LineDrawer />
-      <ButtonDrawer onPress={() => navigation.navigate('Tasks', {})}>
-        <IconAndTitles>
-          <LeftDrawer>
-            <TasksIcon />
-          </LeftDrawer>
-          <ContentDrawer>
-            <TitleContentDrawer>Tarefas</TitleContentDrawer>
-            <DescriptionContentDrawer>Vizualize e adicione tarefas</DescriptionContentDrawer>
-          </ContentDrawer>
-        </IconAndTitles>
-        <RightDrawer>
-          <ChevronRightIcon />
-        </RightDrawer>
-      </ButtonDrawer>
-      <ButtonDrawer onPress={() => navigation.navigate('Services', {})} >
-        <IconAndTitles>
-          <LeftDrawer>
-            <TasksIcon />
-          </LeftDrawer>
-          <ContentDrawer>
-            <TitleContentDrawer>Setores</TitleContentDrawer>
-            <DescriptionContentDrawer>Vizualize e cadastre setores</DescriptionContentDrawer>
-          </ContentDrawer>
-        </IconAndTitles>
-        <RightDrawer>
-          <ChevronRightIcon />
-        </RightDrawer>
-      </ButtonDrawer>
+      <Label>{label}</Label>
+      <InputContainer {...props} />
     </Container >
   );
 };
-export default CustomDrawer;
+export default Input;

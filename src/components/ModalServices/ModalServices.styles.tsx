@@ -4,12 +4,11 @@ import colors from '../../../styles/colors';
 export const Container = styled.SafeAreaView`
   flex: 1;
   background-color: ${colors.white};
-  margin-top:60%;
+  margin-top:90%;
   border-radius:4px;
   padding:15px;
- 
-
 `
+
 export const Title = styled.Text`
   color:${colors.primaryDark};
 `;
@@ -29,15 +28,11 @@ export const IconAndTitles = styled.View`
 export const LeftModalTasks = styled.View`
   align-items: center;
   margin-right: 9px;
-  
-
  
 `
 
-export const ContentModalTasks = styled.View`
-  
+export const ContentModalTasks = styled.View`  
 `
-
 export const TitleContentModalTasks = styled.Text`
   font-size: 18px;
   font-weight: 700;

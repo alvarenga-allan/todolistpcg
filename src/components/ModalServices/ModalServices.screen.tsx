@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Modal from 'react-native-modal'
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { Container, ContentModalTasks, HeaderModalTasks, IconAndTitles, LeftModalTasks, RightModalTasks, TitleContentModalTasks } from './ModalAddTasks.styles';
-import { ModalAddTasksProps } from './ModalAddTasks.types';
+import { Container, ContentModalTasks, HeaderModalTasks, IconAndTitles, LeftModalTasks, RightModalTasks, TitleContentModalTasks } from './ModalServices.styles';
+import { ModalAddTasksProps } from './ModalServices.types';
 import CheckIcon from '../../assets/icons/CheckIcon';
 import CloseButtonModalIcon from '../../assets/icons/CloseButtonModalIcon';
 import Input from '../Input';
@@ -24,7 +24,7 @@ const ModalAddTasks: React.FC<ModalAddTasksProps> = props => {
               <CheckIcon />
             </LeftModalTasks>
             <ContentModalTasks>
-              <TitleContentModalTasks>Adicionar Tarefa</TitleContentModalTasks>
+              <TitleContentModalTasks>Adicionar setor</TitleContentModalTasks>
             </ContentModalTasks>
           </IconAndTitles>
           <RightModalTasks>
@@ -34,23 +34,9 @@ const ModalAddTasks: React.FC<ModalAddTasksProps> = props => {
           </RightModalTasks>
         </HeaderModalTasks>
         <Input label='Nome'
-          placeholder='Digite o nome da tarefa...' />
-        <Input label='Descrição (opcional)'
-          placeholder='Adicione a descrição' />
-        <ContainerSelects>
-          <ContainerRightSelects>
-            <Input label='Data limite'
-              placeholder='dd/mm/ano' />
-            <Input label='Prioridade'
-              placeholder="Nível de prioridades" />
-          </ContainerRightSelects>
-          <ContainerLeftSelects>
-            <Input label='Setor'
-              placeholder='Selecione o setor' />
-            <Input label='Status'
-              placeholder='Selecione o status' />
-          </ContainerLeftSelects>
-        </ContainerSelects>
+          placeholder='Digite o nome do setor...' />
+        <Input label='Cor de identificação'
+          placeholder='Selecione a cor de identificação' />
       </Container>
     </Modal >
   );
