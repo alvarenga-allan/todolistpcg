@@ -14,16 +14,19 @@ margin: 24px 16px 0 16px;
 `;
 
 export const ContainerInput = styled.View`
-background-color: ${colors.primary};
+background-color: ${colors.grayMedium};
 height: 44px;
 justify-content: center;
+align-items: center;
 border-radius: 24px;
+flex-direction:row;
+
 `;
 
 export const InputSearch = styled.TextInput`
 background-color: ${colors.grayMedium};
 height: 24px;
 border-radius: 24px;
-
+width:  90%;
 
 `
