@@ -14,7 +14,7 @@ const Services = () => {
     <Container>
       <Menu />
       <SearchInput />
-      <Title>oioi</Title>
+      <Title>Em Manutenção</Title>
       <ButtonFloat onPress={openAndCloseModal} />
       {modalVisible && <ModalServices visible={modalVisible} onPress={openAndCloseModal} />}
     </Container>

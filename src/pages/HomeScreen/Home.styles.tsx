@@ -30,3 +30,5 @@ border-radius: 24px;
 width:  90%;
 
 `
+export const TaskList = styled.FlatList`
+`
